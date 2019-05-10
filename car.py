@@ -13,7 +13,7 @@ class Car:  # Object representing a car.
 
     def __init__(self, **kwargs):
         # Car Details                                                          --------------------------------------------------------------------------
-        self.make = kwargs.get('make', None)                                   # Make of the car, ex. Mercedes-Benz, McLaren, etc.
+        self.make = kwargs.get('make', None)         # ADD COLOR                          # Make of the car, ex. Mercedes-Benz, McLaren, etc.
         self.model = kwargs.get('model', None)                                 # Model of the car, ex. M5, Huracan, etc.
         self.year = kwargs.get('year', None)                                   # Year of the car, ex. 2008, 2017, etc.
         self.mileage = kwargs.get('mileage', None)                             # Mileage of the car, ex. 61,000 mi, 14,XXX mi, etc.
@@ -29,12 +29,12 @@ class Car:  # Object representing a car.
                       Seat(position='rear center'),                       # |:
                       Seat(position='rear right')]                        # \:
         self.led_headlights = kwargs.get('led', False)                         # Whether or not the car has LED headlights: true or false.
-        self.paddle_shifters = kwargs.get('paddle shifters', False)            # Whether or not the car has paddle shifters: true or false.
+        self.paddle_shifters = kwargs.get('paddle_shifters', False)            # Whether or not the car has paddle shifters: true or false.
         # Car Specifications                                                   --------------------------------------------------------------------------
         self.horsepower = kwargs.get('horsepower', None)                       # Horsepower of the car engine.
         self.torque = kwargs.get('torque', None)                               # Torque of the car engine.
         self.acceleration = kwargs.get('acceleration', None)                   # Acceleration of the car.
-        self.top_speed = kwargs.get('top speed', None)                         # Top speed of the car.
+        self.top_speed = kwargs.get('top_speed', None)                         # Top speed of the car.
 
     def save_to_json(self, file_name: str):
         with open(file_name+'.json', 'w+') as out_file:
