@@ -16,7 +16,7 @@ To define non-default attributes, either pass a kwargs dictionary or define each
 import car
 
 # Defined with dictionary
-customCar = car.Car(**{'year': 2014, 'make': 'Mercedes-Benz', 'model': 'SLS AMG GT Final Edition'})
+customCar = car.Car(**{'year': 2015, 'make': 'Mercedes-Benz', 'model': 'SLS AMG GT Black Series'})
 
 # Defined separately
 anotherCar = car.Car(make='BMW', model='M3', paddle_shifters=True)
