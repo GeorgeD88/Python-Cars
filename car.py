@@ -57,7 +57,7 @@ def dict_attrs(obj: object) -> dict:
         elif not is_object_of_import(called_attr):
             attributes[attr] = getattr(obj, attr)
         else:
-            raise TypeError('HOW THE FUCK DID YOU GET HERE')
+            raise TypeError('Somehow you raised this error which shouldn\'t be raisable')
     return attributes
 
 
