@@ -1,5 +1,5 @@
-from Composition.Car.parts import *
-from Composition.Car.body import *
+from parts import *
+from body import *
 import json
 import sys
 
@@ -13,7 +13,7 @@ class Car:  # Object representing a car.
 
     def __init__(self, **kwargs):
         # Car Details                                                          --------------------------------------------------------------------------
-        self.make = kwargs.get('make', None)         # ADD COLOR                          # Make of the car, ex. Mercedes-Benz, McLaren, etc.
+        self.make = kwargs.get('make', None)                                   # Make of the car, ex. Mercedes-Benz, McLaren, etc.
         self.model = kwargs.get('model', None)                                 # Model of the car, ex. M5, Huracan, etc.
         self.year = kwargs.get('year', None)                                   # Year of the car, ex. 2008, 2017, etc.
         self.mileage = kwargs.get('mileage', None)                             # Mileage of the car, ex. 61,000 mi, 14,XXX mi, etc.
@@ -21,13 +21,13 @@ class Car:  # Object representing a car.
         # Car Parts and Systems                                                --------------------------------------------------------------------------
         self.engine = kwargs.get('engine', engine)
         self.drivetrain = kwargs.get('drivetrain', 'rear-wheel')               # Drivetrain of the car, ex. rear-wheel, all-wheel, etc.
-        self.transmission = kwargs.get('transmission', transmission)         # Transmission object of the car
-        self.tires = kwargs.get('tires', [tire]*4)     # List of tire objects of the car.
-        self.seats = [Seat(position='driver'),                            # List of seat objects of the car.
-                      Seat(position='passenger'),                         # |:
-                      Seat(position='rear left'),                         # |:
-                      Seat(position='rear center'),                       # |:
-                      Seat(position='rear right')]                        # \:
+        self.transmission = kwargs.get('transmission', transmission)           # Transmission object of the car
+        self.tires = kwargs.get('tires', [tire]*4)                             # List of tire objects of the car.
+        self.seats = [Seat(position='driver'),                                 # List of seat objects of the car.
+                      Seat(position='passenger'),                              # |:
+                      Seat(position='rear left'),                              # |:
+                      Seat(position='rear center'),                            # |:
+                      Seat(position='rear right')]                             # \:
         self.led_headlights = kwargs.get('led', False)                         # Whether or not the car has LED headlights: true or false.
         self.paddle_shifters = kwargs.get('paddle_shifters', False)            # Whether or not the car has paddle shifters: true or false.
         # Car Specifications                                                   --------------------------------------------------------------------------
